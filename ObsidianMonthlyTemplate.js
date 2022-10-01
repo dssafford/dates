@@ -1,3 +1,7 @@
+// This creates a monthly obsidian file on my macs, filepath based on machine
+// node obsidianmonthlytemplate.js 10  is the command line call.  Need the desired month added to the call
+// note:  call can be used from keyboard maestro macro and called that way...
+
 const moment = require('moment')
 const fs = require('fs');
 const { exit } = require('process');
@@ -37,10 +41,3 @@ let forthWeek = "##### Forth Week Number: [[2022-W" + moment(firstMonday).add(3,
 
 // Write out to markdown file in Vault
 fs.writeFileSync(filePath + fileName, startTemplate + '\n -------- \n' + firstWeek + '\n' + secondWeek + '\n' + thirdWeek + '\n' + forthWeek)
-
-
-// fs.appendFile('dougDate.md', '\n\n eat shit', Err => {
-//     if (Err) {
-//         Console.Error(Err);
-//     }
-// })
