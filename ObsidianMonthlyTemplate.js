@@ -2,44 +2,24 @@ const moment = require('moment')
 const fs = require('fs');
 const { exit } = require('process');
 
+const inputMonth = process.argv[2];
+console.log('Month input for template = ' + inputMonth);
+//exit()
+
+
 // const first = moment(dv.current().file.name);
 let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2022/'
-const fileName = moment().format('YYYY-MM-DD') + 'x.md';
+const fileName = moment().format('YYYY') + '-' + inputMonth + '.md';
 let result = "";
 
-let startTemplate = '### Monthly Review: \n\n\n\n\n\n ### Goals for Month \n\n\n\n ### Overall \n\n\n\n ### Home \n -[ ] \n\n\n\n ### Work \n -[ ]'
+let startTemplate = '# Monthly Review \n\n ### Theme for Monthly \n- [ ] \n\n\n ### Goals for Monthly \n- [ ] \n\n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '
 
-moment().format('MMMM Do YYYY, h:mm:ss a'); // May 05th 2018, 7:20:58 pm
-moment().format('dddd');                    // Thursday
-moment().format("MMM Do YY");               // May 24th 18
-moment().format('YYYY [escaped] YYYY');     // 2018 escaped 2018
-moment().format();
-
-// var check = moment('2014-07-28', 'YYYY/MM/DD');
-// var check = moment();
-// var month = check.format('M');
-// var day = check.format('D');
-// var year = check.format('YYYY');
-// console.log(check);
-// console.log(month, day, year);
-
-// exit()
+let inputDate = moment().format('YYYY') + '-' + inputMonth;
 
 
-// dv.span("<br>first.day: " + first.format('YYYY-MM-DD'));
-//console.log("hey = " + moment().startOf('month').add(3,'month').format('YYYY-MM-DD'));
-
-let firstMonday = getFirstMondayWithDate(moment()).format('YYYY-MM-DD');
+// let firstMonday = getFirstMondayWithDate('2022-10-01').format('YYYY-MM-DD');
+let firstMonday = getFirstMondayWithDate(inputDate).format('YYYY-MM-DD');
 console.log("first monday: " + firstMonday);
-// exit()
-//let firstWeek = moment(firstMonday).format("w")
-
-
-
-// console.log('First week number for file date = [[2022-' + firstWeek + ']]')
-
-// console.log("First Monday: " + firstMonday);
-// dv.span("<br>Answer from getFirstMondayWithDate = " + firstMonday);
 
 function getFirstMondayWithDate(date) {
     result = moment(date).startOf('month');
@@ -56,7 +36,7 @@ let forthWeek = "##### Forth Week Number: [[2022-W" + moment(firstMonday).add(3,
 
 
 // Write out to markdown file in Vault
-fs.writeFileSync(filePath + fileName, startTemplate + '\n\n\n -------- \n' + firstWeek + '\n' + secondWeek + '\n' + thirdWeek + '\n' + forthWeek)
+fs.writeFileSync(filePath + fileName, startTemplate + '\n -------- \n' + firstWeek + '\n' + secondWeek + '\n' + thirdWeek + '\n' + forthWeek)
 
 
 // fs.appendFile('dougDate.md', '\n\n eat shit', Err => {
