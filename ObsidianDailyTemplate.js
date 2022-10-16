@@ -7,32 +7,25 @@ const fs = require('fs');
 
 const { exit } = require('process');
 
-const inputWeek = process.argv[2];
+// const inputWeek = process.argv[2];
 
-console.log('Week number input for template = ' + inputWeek);
 
-console.log('first day of week for input week = ' + moment().week(inputWeek).startOf().add(1, 'day').format('YYYY-MM-DD'));
-// exit()
+// console.log('Week number input for template = ' + inputWeek);
+
+console.log('Today is ' + moment().format("YYYY-MM-DD"));
+
+// console.log('first day of week for input week = ' + moment().week(inputWeek).startOf().add(1, 'day').format('YYYY-MM-DD'));
+exit()
 
 
 
 // const first = moment(dv.current().file.name);
 let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2022/'
-const fileName = moment().format('YYYY') + '-W' + inputWeek + 'x.md';
+const fileName = moment().format('YYYY-MM-DD') + 'x.md';
 let result = "";
 
-let startTemplate = '# Weekly Review \n\n ### Theme for Week \n- [ ] \n\n\n ### Goals for Week \n- [ ] \n\n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '
-let firstDayDate = moment().week(inputWeek).startOf().add(1, 'day').format('YYYY-MM-DD')
-let seventhDayDate = moment().week(inputWeek).startOf().add(7, 'day').format('YYYY-MM-DD')
+let startTemplate = '# Daily Review \n\n ### Theme for Week \n- [ ] \n\n\n ### Goals for Week \n- [ ] \n\n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '
 
-let firstDay = "##### First day Number: ![[" + moment().week(inputWeek).startOf().add(1, 'day').format('YYYY-MM-DD') + "]]"
-let secondDay = "##### Second day Number: ![[" + moment().week(inputWeek).startOf().add(2, 'day').format('YYYY-MM-DD') + "]]"
-let thirdDay = "##### Third day Number: ![[" + moment().week(inputWeek).startOf().add(3, 'day').format('YYYY-MM-DD') + "]]"
-let forthDay = "##### Forth day Number: ![[" + moment().week(inputWeek).startOf().add(4
-    , 'day').format('YYYY-MM-DD') + "]]"
-let fifthDay = "##### Fifth day Number: ![[" + moment().week(inputWeek).startOf().add(5, 'day').format('YYYY-MM-DD') + "]]"
-let sixthDay = "##### Sixth day Number: ![[" + moment().week(inputWeek).startOf().add(6, 'day').format('YYYY-MM-DD') + "]]"
-let seventhDay = "##### SeventhDay Number: ![[" + moment().week(inputWeek).startOf().add(7, 'day').format('YYYY-MM-DD') + "]]"
 
 let gayleSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'gayle:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2022\nstartDate: " + firstDayDate + "\nendDate: " + seventhDayDate + "\nsummary:\n\ttemplate: 'Gayle interactions: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
 
