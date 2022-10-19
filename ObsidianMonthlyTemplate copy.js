@@ -12,7 +12,7 @@ let firstMonday = getFirstMondayWithDate(moment()).format('YYYY-MM-DD');
 console.log("first monday: " + firstMonday);
 
 function getFirstMondayWithDate(date) {
-    result = moment(date).startOf('month').add(1, 'months';
+    result = moment(date).startOf('month').add(1, 'months');
     while (result.day() !== 1) {
         result.add(1, 'day');
     }
