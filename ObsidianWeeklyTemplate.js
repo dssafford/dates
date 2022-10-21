@@ -18,7 +18,7 @@ console.log('first day of week for input week = ' + moment().week(inputWeek).sta
 
 // const first = moment(dv.current().file.name);
 let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2022/'
-const fileName = moment().format('YYYY') + '-W' + inputWeek + '.md';
+const fileName = moment().format('YYYY') + '-W' + inputWeek + 'xnew.md';
 let result = "";
 
 let startTemplate = '# Weekly Review \n\n ### Theme(s) for Week \n- \n\n\n ## Goals for Week \n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '
@@ -36,15 +36,18 @@ let seventhDay = "##### SeventhDay Number: ![[" + moment().week(inputWeek).start
 
 let gayleSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'gayle:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2022\nstartDate: " + firstDayDate + "\nendDate: " + seventhDayDate + "\nsummary:\n\ttemplate: 'Gayle interactions: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
 
-let reframeSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'gayle:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2022\nstartDate: " + firstDayDate + "\nendDate: " + seventhDayDate + "\nsummary:\n\ttemplate: 'Reframe: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
+let reframeSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'reframe:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2022\nstartDate: " + firstDayDate + "\nendDate: " + seventhDayDate + "\nsummary:\n\ttemplate: 'Reframe: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
 
-let nlpSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'gayle:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2022\nstartDate: " + firstDayDate + "\nendDate: " + seventhDayDate + "\nsummary:\n\ttemplate: 'NLP: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
+let nlpSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'nlp:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2022\nstartDate: " + firstDayDate + "\nendDate: " + seventhDayDate + "\nsummary:\n\ttemplate: 'NLP: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
 
-let meditationSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'gayle:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2022\nstartDate: " + firstDayDate + "\nendDate: " + seventhDayDate + "\nsummary:\n\ttemplate: 'Meditation: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
+let meditationSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'meditation:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2022\nstartDate: " + firstDayDate + "\nendDate: " + seventhDayDate + "\nsummary:\n\ttemplate: 'Meditation: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
 
 console.log(gayleSection);
 // exit()
 
 
 // Write out to markdown file in Vault
-fs.writeFileSync(filePath + fileName, startTemplate + '\n -------- \n' + firstDay + '\n' + secondDay + '\n' + thirdDay + '\n' + forthDay + '\n' + fifthDay + '\n' + sixthDay + '\n' + seventhDay + "\n\n\n" + gayleSection + "\n" + reframeSection + "\n" + nlpSection + "\n" + meditationSection)
+// fs.writeFileSync(filePath + fileName, startTemplate + "\n Metrics \n" + gayleSection + "\n" + reframeSection + "\n" + nlpSection + "\n" + meditationSection)'\n -------- \n' + firstDay + '\n' + secondDay + '\n' + thirdDay + '\n' + forthDay + '\n' + fifthDay + '\n' + sixthDay + '\n' + seventhDay
+
+
+fs.writeFileSync(filePath + fileName, startTemplate + "\n\n### Metrics \n" + gayleSection + "\n" + reframeSection + "\n" + nlpSection + "\n" + meditationSection)

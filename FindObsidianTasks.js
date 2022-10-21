@@ -10,6 +10,8 @@ let result = "";
 // console.log(filePath);
 // exit();
 let newArray = [];
+
+let taskPrefix = "- [ ] "
 try {
     // "
     // filePath = "/Users/c023490/Vaults/DougVault/Calendar/2022/2022-W43xx.md"
@@ -17,12 +19,28 @@ try {
     let file = fs.readFileSync(filePath, "utf8");
     let arr = file.split(/\r?\n/);
 
+    // for (var line of lines) {
     arr.forEach((line, idx) => {
-        if (line.includes("- [ ]")) {
-            newArray.push(line.substring(6, line.length));
-            console.log((idx + 1) + ':' + line);
+        // If the line includes the task prefix, 
+        // we remove and exclude it from the final notes
+        if (line.startsWith(taskPrefix)) {
+            //alert("found");
+            // Remove the trigger from the line
+            var task = line.replace("- [ ] ", "");
+
+            console.log("task=" + task);
+
+            // OmniFocus URL Action
+            doCallbackURL("omnifocus:///add", { "name": task, "note": "test note here", "autosave": true });
         }
-    });
+    })
+
+    // arr.forEach((line, idx) => {
+    //     if (line.includes("- [ ]")) {
+    //         newArray.push(line.substring(6, line.length));
+    //         console.log((idx + 1) + ':' + line);
+    //     }
+    // });
     // console.log(data);
 
 } catch (err) {
