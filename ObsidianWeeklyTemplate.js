@@ -18,7 +18,7 @@ console.log('first day of week for input week = ' + moment().week(inputWeek).sta
 
 // const first = moment(dv.current().file.name);
 let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2022/'
-const fileName = moment().format('YYYY') + '-W' + inputWeek + 'xnew.md';
+const fileName = moment().format('YYYY') + '-W' + inputWeek + '.md';
 let result = "";
 
 let startTemplate = '# Weekly Review \n\n ### Theme(s) for Week \n- \n\n\n ## Goals for Week \n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '

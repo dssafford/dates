@@ -25,10 +25,10 @@ console.log(endOfMonth);
 
 // const first = moment(dv.current().file.name);
 let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2022/'
-const fileName = moment().format('YYYY') + '-' + inputMonth + 'xxxx.md';
+const fileName = moment().format('YYYY') + '-' + inputMonth + '.md';
 let result = "";
 
-let startTemplate = '# Monthly Review \n\n ### Theme for Monthly \n- [ ] \n\n\n ### Goals for Monthly \n- [ ] \n\n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '
+let startTemplate = '# Monthly Review \n\n ### Theme for Monthly \n- \n\n\n ### Goals for Monthly \n- [ ] \n\n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '
 
 let inputDate = moment().format('YYYY') + '-' + inputMonth;
 

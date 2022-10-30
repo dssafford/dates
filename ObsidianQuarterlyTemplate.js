@@ -23,7 +23,7 @@ let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2022/'
 const fileName = moment().format('YYYY') + '-Q' + inputQuarter + '.md';
 let result = "";
 
-let startTemplate = '# Quarterly Review \n\n ### Theme for Quarter \n- [ ] \n\n\n ### Goals for Quarter \n- [ ] \n\n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '
+let startTemplate = '# Quarterly Review \n\n ### Theme for Quarter \n- \n\n\n ### Goals for Quarter \n- [ ] \n\n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '
 
 
 let firstMonth = "##### First Month Number: [[2022-" + moment().quarter(inputQuarter).startOf('quarter').format('MM') + "]]"

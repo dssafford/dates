@@ -29,7 +29,7 @@ let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2022/'
 const fileName = inputQuarter + '.md';
 let result = "";
 
-let startTemplate = "# Annual Planning and Review for Year: " + inputQuarter + "\n\n ### Theme for Year \n- [ ] \n\n\n ### Goals for Year \n- [ ] \n\n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] "
+let startTemplate = "# Annual Planning and Review for Year: " + inputQuarter + "\n\n ### Theme for Year \n- \n\n\n ### Goals for Year \n- [ ] \n\n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] "
 
 //Quarters
 let firstQuarter = '##### First quarter = [[' + inputQuarter + "-Q" + moment().year(inputQuarter).quarter(1).format('Q') + "]]";
