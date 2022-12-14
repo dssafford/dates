@@ -17,25 +17,26 @@ const endOfMonth = moment(startOfMonth).endOf('month').format('YYYY-MM-DD')
 
 console.log(startOfMonth);
 console.log(endOfMonth);
-// exit();
+//exit();
 
 
 // exit()
 
 
 // const first = moment(dv.current().file.name);
-let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2022/'
+let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2023/'
 const fileName = moment().format('YYYY') + '-' + inputMonth + '.md';
 let result = "";
 
-let startTemplate = '# Monthly Review \n\n ### Theme for Monthly \n- \n\n\n ### Goals for Monthly \n- [ ] \n\n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '
+let startTemplate = '# Monthly Review \n\n ### Theme for Month \n- \n\n\n ### Goals for Month\n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '
 
 let inputDate = moment().format('YYYY') + '-' + inputMonth;
 
 
-// let firstMonday = getFirstMondayWithDate('2022-10-01').format('YYYY-MM-DD');
+// let firstMonday = getFirstMondayWithDate('2023-10-01').format('YYYY-MM-DD');
 let firstMonday = getFirstMondayWithDate(inputDate).format('YYYY-MM-DD');
 console.log("first monday: " + firstMonday);
+//exit()
 
 function getFirstMondayWithDate(date) {
     result = moment(date).startOf('month');
@@ -47,18 +48,18 @@ function getFirstMondayWithDate(date) {
 
 
 
-let firstWeek = "##### First Week Number: [[2022-W" + moment(firstMonday).format("w") + "]]"
-let secondWeek = "##### Second Week Number: [[2022-W" + moment(firstMonday).add(1, 'week').format("w") + "]]"
-let thirdWeek = "##### Third Week Number: [[2022-W" + moment(firstMonday).add(2, 'week').format("w") + "]]"
-let forthWeek = "##### Forth Week Number: [[2022-W" + moment(firstMonday).add(3, 'week').format("w") + "]]"
+let firstWeek = "##### First Week Number: [[2023-W" + moment(firstMonday).format("w") + "]]"
+let secondWeek = "##### Second Week Number: [[2023-W" + moment(firstMonday).add(1, 'week').format("w") + "]]"
+let thirdWeek = "##### Third Week Number: [[2023-W" + moment(firstMonday).add(2, 'week').format("w") + "]]"
+let forthWeek = "##### Forth Week Number: [[2023-W" + moment(firstMonday).add(3, 'week').format("w") + "]]"
 
-let gayleSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'gayle:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2022\nstartDate: " + startOfMonth + "\nendDate: " + endOfMonth + "\nsummary:\n\ttemplate: 'Gayle interactions: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
+let gayleSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'gayle:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2023\nstartDate: " + startOfMonth + "\nendDate: " + endOfMonth + "\nsummary:\n\ttemplate: 'Gayle interactions: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
 
-let reframeSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'reframe:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2022\nstartDate: " + startOfMonth + "\nendDate: " + endOfMonth + "\nsummary: \n\ttemplate: 'Reframe: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
+let reframeSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'reframe:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2023\nstartDate: " + startOfMonth + "\nendDate: " + endOfMonth + "\nsummary: \n\ttemplate: 'Reframe: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
 
-let nlpSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'nlp:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2022\nstartDate: " + startOfMonth + "\nendDate: " + endOfMonth + "\nsummary: \n\ttemplate: 'NLP: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
+let nlpSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'nlp:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2023\nstartDate: " + startOfMonth + "\nendDate: " + endOfMonth + "\nsummary: \n\ttemplate: 'NLP: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
 
-let meditationSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'meditation:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2022\nstartDate: " + startOfMonth + "\nendDate: " + endOfMonth + "\nsummary: \n\ttemplate: 'Meditation: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
+let meditationSection = "\n``` tracker\nsearchType: text\nsearchTarget: 'meditation:\\s+(?<value>[\\-]?[0-9]+[\\.][0-9]+|[\\-]?[0-9]+)'\nfolder: DougVault/Calendar/2023\nstartDate: " + startOfMonth + "\nendDate: " + endOfMonth + "\nsummary: \n\ttemplate: 'Meditation: {{ sum()}}'\n\tstyle: 'color: red; '\n```"
 
 
 

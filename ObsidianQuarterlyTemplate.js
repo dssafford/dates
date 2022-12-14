@@ -19,16 +19,16 @@ console.log('Moment Month 3 = ' + moment().quarter(inputQuarter).startOf('quarte
 // exit()
 
 
-let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2022/'
+let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2023/'
 const fileName = moment().format('YYYY') + '-Q' + inputQuarter + '.md';
 let result = "";
 
-let startTemplate = '# Quarterly Review \n\n ### Theme for Quarter \n- \n\n\n ### Goals for Quarter \n- [ ] \n\n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '
+let startTemplate = '# Quarterly Review \n\n ### Theme for Quarter \n- \n\n\n ### Goals for Quarter\n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] '
 
 
-let firstMonth = "##### First Month Number: [[2022-" + moment().quarter(inputQuarter).startOf('quarter').format('MM') + "]]"
-let secondMonth = "##### Second Month Number: [[2022-" + moment().quarter(inputQuarter).startOf('quarter').add(1, 'month').format('MM') + "]]"
-let thirdMonth = "##### Third Month Number: [[2022-" + moment().quarter(inputQuarter).startOf('quarter').add(1, 'month').format('MM') + "]]"
+let firstMonth = "##### First Month Number: [[2023-" + moment().quarter(inputQuarter).startOf('quarter').format('MM') + "]]"
+let secondMonth = "##### Second Month Number: [[2023-" + moment().quarter(inputQuarter).startOf('quarter').add(1, 'month').format('MM') + "]]"
+let thirdMonth = "##### Third Month Number: [[2023-" + moment().quarter(inputQuarter).startOf('quarter').add(1, 'month').format('MM') + "]]"
 
 // Write out to markdown file in Vault
 fs.writeFileSync(filePath + fileName, startTemplate + '\n -------- \n' + firstMonth + '\n' + secondMonth + '\n' + thirdMonth)

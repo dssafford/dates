@@ -3,7 +3,7 @@ const fs = require('fs');
 const { exit } = require('process');
 
 // const first = moment(dv.current().file.name);
-let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2022/'
+let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2023/'
 const fileName = moment().format('YYYY-MM-DD') + 'x.md';
 let result = "";
 
@@ -44,7 +44,7 @@ fs.appendFile('dougDate.md', '\n\n eat shit', Err => {
 
 
 
-// // console.log('First week number for file date = [[2022-' + firstWeek + ']]')
+// // console.log('First week number for file date = [[2023-' + firstWeek + ']]')
 
 // // console.log("First Monday: " + firstMonday);
 // // dv.span("<br>Answer from getFirstMondayWithDate = " + firstMonday);
@@ -57,10 +57,10 @@ fs.appendFile('dougDate.md', '\n\n eat shit', Err => {
 //     return result;
 // }
 
-// let firstWeek = "##### First Week Number: [[2022-W" + moment(firstMonday).format("w") + "]]"
-// let secondWeek = "##### Second Week Number: [[2022-W" + moment(firstMonday).add(1, 'week').format("w") + "]]"
-// let thirdWeek = "##### Third Week Number: [[2022-W" + moment(firstMonday).add(2, 'week').format("w") + "]]"
-// let forthWeek = "##### Forth Week Number: [[2022-W" + moment(firstMonday).add(3, 'week').format("w") + "]]"
+// let firstWeek = "##### First Week Number: [[2023-W" + moment(firstMonday).format("w") + "]]"
+// let secondWeek = "##### Second Week Number: [[2023-W" + moment(firstMonday).add(1, 'week').format("w") + "]]"
+// let thirdWeek = "##### Third Week Number: [[2023-W" + moment(firstMonday).add(2, 'week').format("w") + "]]"
+// let forthWeek = "##### Forth Week Number: [[2023-W" + moment(firstMonday).add(3, 'week').format("w") + "]]"
 
 
 // // Write out to markdown file in Vault

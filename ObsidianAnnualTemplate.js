@@ -1,5 +1,5 @@
 // This creates an annual obsidian file on my macs, filepath based on machine
-// node obsidianannualtemplate.js 2022  is the command line call.  Need the desired year added to the call
+// node obsidianannualtemplate.js 2023  is the command line call.  Need the desired year added to the call
 // note:  call can be used from keyboard maestro macro and called that way...
 
 
@@ -25,11 +25,11 @@ console.log('Year input for template = ' + inputQuarter);
 
 // exit()
 
-let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2022/'
+let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2023/'
 const fileName = inputQuarter + '.md';
 let result = "";
 
-let startTemplate = "# Annual Planning and Review for Year: " + inputQuarter + "\n\n ### Theme for Year \n- \n\n\n ### Goals for Year \n- [ ] \n\n\n ### Overall \n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] "
+let startTemplate = "# Annual Planning and Review for Year: " + inputQuarter + "\n\n ### Theme for Year \n- \n\n\n ### Goals for Year \n\n\n ##### Home \n - [ ] \n\n\n ##### Work \n - [ ] "
 
 //Quarters
 let firstQuarter = '##### First quarter = [[' + inputQuarter + "-Q" + moment().year(inputQuarter).quarter(1).format('Q') + "]]";
