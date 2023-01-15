@@ -19,7 +19,7 @@ console.log('Moment Month 3 = ' + moment().quarter(inputQuarter).startOf('quarte
 // exit()
 
 
-let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2023/'
+let filePath = '/Users/c023490/Vaults/DougVault/Calendar/CurrentYear/'
 const fileName = moment().format('YYYY') + '-Q' + inputQuarter + '.md';
 let result = "";
 

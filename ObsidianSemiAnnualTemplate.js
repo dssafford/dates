@@ -14,7 +14,7 @@ const inputHalf = process.argv[2];
 if (inputHalf == 1) {
     console.log('Year half input for template = ' + inputHalf);
 
-    console.log('Moment year half = ' + moment().month(1).format('MM-DD-YYYY'));
+    console.log('Moment year half = ' + moment().month(0).format('MM-DD-YYYY'));
     console.log('Moment Month 1 = ' + moment().month(0).format('MM'));
     console.log('Moment Month 2 = ' + moment().month(1).format('MM'));
     console.log('Moment Month 3 = ' + moment().month(2).format('MM'));
@@ -24,7 +24,7 @@ if (inputHalf == 1) {
 } else {
     console.log('Year half input for template = ' + 23);
 
-    console.log('Moment year half = ' + moment().month(1).format('MM-DD-YYYY'));
+    console.log('Moment year half = ' + moment().month(0).format('MM-DD-YYYY'));
     console.log('Moment Month 1 = ' + moment().month(6).format('MM'));
     console.log('Moment Month 2 = ' + moment().month(7).format('MM'));
     console.log('Moment Month 3 = ' + moment().month(8).format('MM'));
@@ -35,7 +35,7 @@ if (inputHalf == 1) {
 exit()
 
 
-let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2023/'
+let filePath = '/Users/c023490/Vaults/DougVault/Calendar/CurrentYear/'
 const fileName = moment().format('YYYY') + '-Q' + inputQuarter + '.md';
 let result = "";
 

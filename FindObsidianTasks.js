@@ -3,7 +3,7 @@ const fs = require('fs');
 const { exit } = require('process');
 
 // const first = moment(dv.current().file.name);
-let filePath = "/Users/c023490/Vaults/DougVault/Calendar/2022/2022-W43xx.md"
+let filePath = "/Users/c023490/Vaults/DougVault/Calendar/CurrentYear/2022-W43xx.md"
 // const fileName = '2022-W43xx.md';
 // const file = filePath + fileName;
 let result = "";
@@ -14,7 +14,7 @@ let newArray = [];
 let taskPrefix = "- [ ] "
 try {
     // "
-    // filePath = "/Users/c023490/Vaults/DougVault/Calendar/2022/2022-W43xx.md"
+    // filePath = "/Users/c023490/Vaults/DougVault/Calendar/CurrentYear/2022-W43xx.md"
     const data = fs.readFileSync(filePath, 'utf8');
     let file = fs.readFileSync(filePath, "utf8");
     let arr = file.split(/\r?\n/);

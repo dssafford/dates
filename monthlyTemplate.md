@@ -1,6 +1,6 @@
 ### Monthly Review:
 
-[[DougVault/Calendar/2022/2022-04 | 2022-04]] <== <button class="date_button_today">This Month</button> ==> [[[DougVault/Calendar/2022/2022-06 | 2022-06]]
+[[DougVault/Calendar/CurrentYear/2022-04 | 2022-04]] <== <button class="date_button_today">This Month</button> ==> [[[DougVault/Calendar/CurrentYear/2022-06 | 2022-06]]
 
 ---
 
@@ -20,14 +20,14 @@
 
 
 ### Weekly Notes
-- [[[DougVault/Calendar/2022/2022-W36 | 2022-W36 ]]
+- [[[DougVault/Calendar/CurrentYear/2022-W36 | 2022-W36 ]]
 	- 
-- [[[DougVault/Calendar/2022/2022-W37 | 2022-W37]]
+- [[[DougVault/Calendar/CurrentYear/2022-W37 | 2022-W37]]
 	- 
--- [[[DougVault/Calendar/2022/2022-W38 | 2022-W38]]
+-- [[[DougVault/Calendar/CurrentYear/2022-W38 | 2022-W38]]
 	- 
-- [[[DougVault/Calendar/2022/2022-W39 | 2022-W39]]
+- [[[DougVault/Calendar/CurrentYear/2022-W39 | 2022-W39]]
 	- 
-- [[[DougVault/Calendar/2022/2022-W40 | 2022-W40]]
+- [[[DougVault/Calendar/CurrentYear/2022-W40 | 2022-W40]]
 	- 
 

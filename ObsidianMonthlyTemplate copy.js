@@ -3,7 +3,7 @@ const fs = require('fs');
 const { exit } = require('process');
 
 // const first = moment(dv.current().file.name);
-let filePath = '/Users/c023490/Vaults/DougVault/Calendar/2022/'
+let filePath = '/Users/c023490/Vaults/DougVault/Calendar/CurrentYear/'
 const fileName = moment().format('YYYY-MM') + 'x.md';
 let result = "";
 
